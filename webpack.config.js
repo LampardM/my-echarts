@@ -19,7 +19,7 @@ module.exports = {
     contentBase: "./public",
     historyApiFallback: true,
     inline: true,
-    hot: true
+    hot: true,
   },
 
   module: {
