@@ -5,7 +5,7 @@ const myEcharts = echarts.init(echartsDom)
 
 myEcharts.setOption({
   title: {
-    text: 'ECharts 入门示例'
+    text: '合肥市交通线路',
   },
   tooltip: {},
   xAxis: {
