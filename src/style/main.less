@@ -2,13 +2,7 @@
 @import "content.less";
 @import "reset.less";
 
-html{
-  font-size: 62.5%;
-}
-
 body{
-  width: 2 * 100 * @unit-width;
-  height: 100 * @unit-height;
   padding: 0 0;
   overflow: hidden;
 	background: @bg-color;
@@ -16,27 +10,4 @@ body{
 	color: @text-color;
 	font-size: 1.6rem;
   line-height: 1.5;
-  transform-origin: 0 0;
-	-webkit-font-smoothing: antialiased;
-    font-family: '微软雅黑','Microsoft Yahei','Hiragino Sans GB',tahoma,arial,'宋体';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-@media screen and (max-width: 1680px) {
-	html{
-		font-size: calc(62.5% * .875);
-	}
-}
-
-@media screen and (max-width: 1440px) {
-	html{
-		font-size: calc(62.5% * .75);
-	}
-}
-
-@media screen and (max-width: 1280px) {
-	html{
-		font-size: calc(62.5% * .65);
-	}
 }

@@ -1,11 +1,23 @@
 const echarts = require('echarts')
 const echartsDom = $('#echartsDom')[0]
 
+const resizeWorldMapContainer = function () {
+  echartsDom.style.width = window.innerWidth + 'px';
+  echartsDom.style.height = window.innerHeight + 'px';
+};
+
+resizeWorldMapContainer();
+
 const myEcharts = echarts.init(echartsDom)
 
 myEcharts.setOption({
   title: {
     text: '合肥市交通线路',
+    textStyle: {
+      color: 'rgba(255, 255, 255, 0.7)'
+    },
+    left: 'center',
+    top: '10px'
   },
   tooltip: {},
   xAxis: {
@@ -18,3 +30,8 @@ myEcharts.setOption({
     data: [5, 20, 36, 10, 10, 20]
   }]
 })
+
+window.onresize = function () {
+  resizeWorldMapContainer();
+  myEcharts.resize();
+};
