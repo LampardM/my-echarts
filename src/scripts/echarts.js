@@ -1,7 +1,7 @@
 const echarts = require('echarts')
 const echartsDom = $('#echartsDom')[0]
 
-const resizeWorldMapContainer = function () {
+const resizeWorldMapContainer = () => {
   echartsDom.style.width = window.innerWidth + 'px';
   echartsDom.style.height = window.innerHeight + 'px';
 };
@@ -12,7 +12,7 @@ const myEcharts = echarts.init(echartsDom)
 
 myEcharts.setOption({
   title: {
-    text: '监控大屏',
+    text: '监控大屏11',
     textStyle: {
       color: 'rgba(255, 255, 255, 0.7)'
     },
@@ -281,7 +281,7 @@ myEcharts.setOption({
   ]
 })
 
-window.onresize = function () {
+window.onresize = () => {
   resizeWorldMapContainer();
   myEcharts.resize();
 };
